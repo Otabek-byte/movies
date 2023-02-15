@@ -1,71 +1,51 @@
+{% extends 'movies/base.html' %}
 
-            <!-- //header -->
-            <!--/banner-->
 
-            <!--// banner-inner -->
-
-        </div>
-        <!--//main-content-->
-        <!---->
-        <ol class="breadcrumb editContent">
-            <li class="breadcrumb-item">
-                <a href="index.html" class="editContent">Home</a>
-            </li>
-            <li class="breadcrumb-item active editContent">Single Page</li>
-        </ol>
-        <!---->
-        <!-- banner -->
-        <section class="ab-info-main py-md-5 py-4 editContent" style="padding-left: 3rem; padding-right: 3rem;">
-            <div class="container-fluid py-md-3">
-                <div class="row">
-
-                    <!-- //product left -->
-                    <!-- product right -->
-                    <div class="left-ads-display col-lg-9">
-                        <div class="row">
-                            {% for movie in movie_list %}
-                            <div class="col-md-4 product-men">
-                                <div class="product-shoe-info editContent text-center mt-lg-4" >
-                                    <div class="men-thumb-item">
-                                        <img src="{{ movie.poster.url }}" class="img-fluid" alt="" >
-                                    </div>
-                                    <div class="item-info-product">
-                                        <h4 class="">
-                                            <a href="{{ movie.get_absolute_url }}" class="editContent" >
-                                                {{ movie.title }}
-                                            </a>
-                                        </h4>
-
-                                        <div class="product_price">
-                                            <div class="grid-price">
-                                                <span class="money editContent" >{{ movie.tagline }}</span>
-                                            </div>
-                                        </div>
-                                        <ul class="stars">
-                                            <li><a href="#"><span class="fa fa-star" aria-hidden="true" ></span></a></li>
-                                            <li><a href="#"><span class="fa fa-star" aria-hidden="true" ></span></a></li>
-                                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true" ></span></a></li>
-                                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true" ></span></a></li>
-                                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true" ></span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            {% endfor %}
+{% block movie %}     <div class="left-ads-display col-lg-9">
+    <div class="row">
+        {% for movie in movie_list %}
+            <div class="col-md-4 product-men">
+                <div class="product-shoe-info editContent text-center mt-lg-4" >
+                    <div class="men-thumb-item">
+                        <img src="{{ movie.poster.url }}" class="img-fluid" alt="" >
+                    </div>
+                    <div class="item-info-product">
+                        <h4 class="">
+                            <a href="{{ movie.get_absolute_url }}" class="editContent" >
+                                {{ movie.title }}
+                            </a>
+                        </h4>
+                        <div class="product_price">
+                            <div class="grid-price">
+                                <span class="money editContent" >{{ movie.tagline }}</span>
                             </div>
                         </div>
-                        <!--<div class="grid-img-right mt-4 text-right bg bg1" >
-                            <span class="money editContent" >Flat 50% Off</span>
-                            <a href="moviesingle.html" class="btn" >Now</a>
-                        </div>-->
+                        <ul class="stars">
+                            <li><a href="#"><span class="fa fa-star" aria-hidden="true" ></span></a></li>
+                            <li><a href="#"><span class="fa fa-star" aria-hidden="true" ></span></a></li>
+                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true" ></span></a></li>
+                            <li><a href="#"><span class="fa fa-star-half-o" aria-hidden="true" ></span></a></li>
+                            <li><a href="#"><span class="fa fa-star-o" aria-hidden="true" ></span></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- //contact -->
+        {% endfor %}
+    </div>
+</div>
+{% endblock movie %}
 
-        <!-- //footer -->
-        <div class="cpy-right py-3">
+
+<ol class="breadcrumb editContent">
+    <li class="breadcrumb-item">
+        <a href="index.html" class="editContent">Home</a>
+    </li>
+    <li class="breadcrumb-item active editContent">Single Page</li>
+</ol>
+
+
+
+<div class="cpy-right py-3">
             <div class="container">
                 <div class="row">
                     <p class="col-md-10 text-left">© 2019 DjangoMovie. All rights reserved | Design by

@@ -381,6 +381,12 @@ li > a:only-child:after {
 /* header */
 
 /*--/banner --*/
+.bg{
+    background-color: rgba(0,0,0,0);
+    margin-top: 0px;
+    background-image: url('../single-post-pic.jpg');
+
+}
 
 .main-banner {
     background: url(../images/banner.jpg)no-repeat center;
