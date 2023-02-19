@@ -380,10 +380,10 @@ li > a:only-child:after {
 
 /* header */
 
-/*--/banner --*/
+
 .bg{
     background-color: rgba(0,0,0,0);
-    margin-top: 0px;
+    margin-top: 0;
     background-image: url('../single-post-pic.jpg');
 
 }
@@ -399,6 +399,7 @@ li > a:only-child:after {
     min-height: 50em;
 }
 
+
 .main-banner.inner {
     background: url(../images/banner.jpg)no-repeat center;
     -webkit-background-size: cover;
@@ -409,6 +410,7 @@ li > a:only-child:after {
     position: relative;
     min-height: 20em;
 }
+/*--/banner --*/
 
 /*-- place holder --*/
 
